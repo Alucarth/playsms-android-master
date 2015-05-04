@@ -1,0 +1,86 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LayoutMatchParent"
+    android:fillViewport="true"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        style="@style/DefaultLayout"
+        android:background="@color/blue_sky_primary">
+
+        <LinearLayout style="@style/LayoutVertical"
+            android:layout_weight="3"
+            android:gravity="bottom">
+
+            <TextView style="@style/BannerTittle"
+                android:visibility="gone"
+                android:text="@string/tittle"
+                android:id="@+id/banner_tittle" />
+
+            <TextView style="@style/BannerSubTittle"
+                android:visibility="gone"
+                android:text="@string/subtittle"
+                android:id="@+id/banner_subtittle" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_margin="@dimen/default_component_margin"
+                android:src="@drawable/logo"/>
+
+        </LinearLayout>
+
+        <FrameLayout style="@style/LayoutMatchParent"
+            android:layout_weight="4">
+
+            <LinearLayout style="@style/LayoutHorizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/layout_loading">
+
+                <ProgressBar style="@style/LayoutWrapContent" />
+
+                <TextView style="@style/BannerSubTittle"
+                    android:text="Cargando, Por Favor"
+                    android:id="@+id/text_login_loading"/>
+
+            </LinearLayout>
+
+            <TextView style="@style/ErrorMessage"
+                android:layout_gravity="center"
+                android:text=""
+                android:id="@+id/text_login_error" />
+
+        </FrameLayout>
+
+        <View style="@style/DashedLine"/>
+
+        <LinearLayout style="@style/LayoutVertical"
+            android:layout_weight="3">
+
+
+            <EditText style="@style/EditText"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/username"
+                android:id="@+id/username" />
+
+            <View style="@style/DashedLine" />
+
+            <EditText style="@style/EditText"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:id="@+id/password" />
+
+            <Button style="@style/ButtonSignIn"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/signin"
+                android:id="@+id/button_login"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
